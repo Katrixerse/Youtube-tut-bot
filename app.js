@@ -47,6 +47,30 @@ Client.on("message", async (message) => {
 		message.channel.send({embed})
 	} else
 
+   if (command === "cat") {
+	   const { body } = await superagent
+	   .get('http://random.cat/meow');
+	   const embed = new Discord.RichEmbed()
+	   .setColor(0x954D23)
+	   .setTitle("Meow :cat:")
+	   .setImage(body.file)
+	   message.channel.send({embed})
+   } else
+
+   if (command === "announcement") {
+	   if (message.member.hasPermission("ADMINISTRATOR")) {
+		   const text = args.join(" ")
+		   if (text.length < 1) return message.channel.send("Can not announce nothing");
+		   //const colour = args.slice(2).join("");
+		   const embed = new Discord.RichEmbed()
+		   .setColor(0x954D23)
+		   .setTitle("Important Announcement:")
+		   .setDescription(text);
+		   message.channel.send("@everyone")
+		   message.channel.send({embed})
+	   }
+   } else
+
 	if (command == "help") {
 		const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
