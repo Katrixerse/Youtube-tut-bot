@@ -15,11 +15,15 @@ Client.on("ready", () => {
 // welcome message
 
 Client.on("guildMemberAdd", member => {
-   member.guild.defaultChannel.send("Welcome to: " + member.guild.name + " Hope you enjoy it here")
+	   const welcomeChannel = member.guild.channels.find('name', 'welcome');
+                if (!welcomeChannel === null) return;
+   client.channels.get(welcomeChannel.id).send("Welcome to: " + member.guild.name + " Hope you enjoy it here")
 });
 
 Client.on("guildMemberRemove", member => {
-   member.guild.defaultChannel.send("Goodbye: " + member.user.username + " from " + member.guild.name)
+   const welcomeChannel = member.guild.channels.find('name', 'welcome');
+                if (!welcomeChannel === null) return;
+   client.channels.get(welcomeChannel.id).send("Goodbye: " + member.user.username + " from " + member.guild.name)
 });
 
 Client.on("guildCreate", guild => {
