@@ -53,7 +53,7 @@ Client.on("message", async (message) => {
 
    if (command === "cat") {
 	   const { body } = await superagent
-	   .get('http://random.cat/meow');
+	   .get('aws.random.cat/meow');
 	   const embed = new Discord.RichEmbed()
 	   .setColor(0x954D23)
 	   .setTitle("Meow :cat:")
