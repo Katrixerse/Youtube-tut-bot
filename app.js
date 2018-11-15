@@ -2,10 +2,7 @@ const Discord = require('discord.js');
 const superagent = require("superagent");
 const Client = new Discord.Client();
 const OwnerID = "130515926117253122";
-
 const prefix = "!"
-
-
 
 Client.on("ready", () => {
 	console.log("online");
