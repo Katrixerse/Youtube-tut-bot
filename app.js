@@ -87,4 +87,4 @@ Client.on("message", async (message) => {
 
 });
 
-Client.login("MzQxNDc5NTYwNjA2NjQ2Mjcz.DGBrIg._GlRaK0EnvLZv0_CnYTtuNOhvFo"); //replace with your token dont share yours.
+Client.login("ODA5NzI5MTQ3MTE4OTQ0Mjc2.YCZVCA.582gqVPRrckk5U031-7pnf3JIJM"); //replace with your token dont share yours.
